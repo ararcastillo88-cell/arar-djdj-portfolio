@@ -4,69 +4,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yeoj & Jhayrone | Portfolio</title>
+    <title>Castillo & Parungo | Interactive Portfolio</title>
+    <!-- Font Awesome Icons for social media links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link sa iyong custom CSS file -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
 
-    <nav>
-        <div class="logo">Y & J Developers</div>
-        <ul>
-            <li><a href="#team">The Team</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <!-- Main Container: Dark Mode Theme -->
+    <div class="main-container">
 
-    <header class="hero">
-        <h1>Welcome to Our Portfolio</h1>
-        <p>Created by Yeoj Mariano & Jhayrone Apostol</p>
-    </header>
+        <header class="header">
+            <h1>Rizalino & Diego | Digital Portfolio</h1>
+        </header>
 
-    <section id="team" class="container">
-        <h2>Meet the Developers</h2>
-        <div class="team-grid">
+        <!-- Profile Section: Gumagamit ng Grid para sa Split View -->
+        <section id="profiles" class="profile-grid">
             
-            <div class="card">
-                <div class="avatar-placeholder">IMG</div>
-                <h3>Yeoj Mariano</h3>
-                <p class="role">Backend Developer</p>
-                <p class="desc">
-                    [Ilagay dito ang short bio ni Yeoj. Halimbawa: Mahilig sa Python at database management.]
-                </p>
-                <a href="#" class="btn">View Profile</a>
+            <!-- Rizalino's Card (Frontend Focus) -->
+            <div class="developer-card rzal-card">
+                <div class="card-header">
+                    <!-- Profile Picture (Tiyakin na tama ang filepath) -->
+                    <div class="profile-img-container">
+                        <img src="{% static 'IMG_2741.jpg' %}" alt="Rizalino Profile" class="profile-img">
+                    </div>
+                    <h2>Rizalino DR. Castillo Jr.</h2>
+                    <p class="role-title">Frontend Developer | UX Designer</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h3>About Me</h3>
+                    <p class="bio-text">
+                        Creative problem-solver na may passion sa pagbuo ng intuitive at visually appealing user interfaces gamit ang modern web technologies tulad ng React at Vue.js. Expert sa responsive design.
+                    </p>
+
+                    <h3>Key Skills</h3>
+                    <div class="skill-tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Tailwind CSS</span>
+                        <span class="tag">Figma</span>
+                    </div>
+
+                    <a href="#projects-rizal" class="project-btn rzal-btn">View Rizalino's Projects</a>
+                </div>
             </div>
 
-            <div class="card">
-                <div class="avatar-placeholder">IMG</div>
-                <h3>Jhayrone Apostol</h3>
-                <p class="role">Frontend Developer</p>
-                <p class="desc">
-                    [Ilagay dito ang short bio ni Jhayrone. Halimbawa: Mahilig sa UI/UX design at React.]
-                </p>
-                <a href="#" class="btn">View Profile</a>
+            <!-- Diego's Card (Backend Focus) -->
+            <div class="developer-card diego-card">
+                <div class="card-header">
+                    <!-- Profile Picture (Tiyakin na tama ang filepath) -->
+                    <div class="profile-img-container">
+                        <img src="{% static 'Brown and Beige Vintage School Schedule Instagram Story.jpg' %}" alt="Diego Profile" class="profile-img">
+                    </div>
+                    <h2>Diego Jose Parungo</h2>
+                    <p class="role-title">Backend Specialist | Data Engineer</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h3>About Me</h3>
+                    <p class="bio-text">
+                        Mahilig sa pag-handle ng malalaking data sets at pagbuo ng robust, secure, at high-performance na backend systems gamit ang Python, Django, at cloud platforms.
+                    </p>
+
+                    <h3>Key Skills</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Django</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">REST APIs</span>
+                        <span class="tag">Git & AWS</span>
+                    </div>
+
+                    <a href="#projects-diego" class="project-btn diego-btn">View Diego's Projects</a>
+                </div>
             </div>
 
-        </div>
-    </section>
+        </section>
 
-    <section id="projects" class="container">
-        <h2>Our Projects</h2>
-        <div class="project-list">
-            <div class="project-item">
-                <h3>Project 1</h3>
-                <p>Description ng project niyo dito.</p>
+        <!-- Projects Section (Interactivity Example) -->
+        <section id="projects" class="projects-section">
+            <h2>Featured Projects</h2>
+            <div id="projects-rizal" class="project-group">
+                <h3>Rizalino's Frontend Work</h3>
+                <div class="project-item">
+                    <h4>E-Commerce UI Redesign</h4>
+                    <p>Modern at responsive design gamit ang Figma at React.js.</p>
+                </div>
             </div>
-            <div class="project-item">
-                <h3>Project 2</h3>
-                <p>Description ng project niyo dito.</p>
+            <div id="projects-diego" class="project-group">
+                <h3>Diego's Backend Systems</h3>
+                <div class="project-item">
+                    <h4>Real-time Data API</h4>
+                    <p>API development na nagha-handle ng 10,000 requests per second gamit ang Django REST Framework.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <p>&copy; 2024 Yeoj & Jhayrone. Built with Django.</p>
-    </footer>
+        <footer class="footer">
+            <p>&copy; 2024 Castillo & Parungo. Built with Django and Modern Web Design.</p>
+        </footer>
+    </div>
 
 </body>
 </html>
