@@ -43,6 +43,7 @@ body {
     /* Neon/Gradient Text Effect */
     background: linear-gradient(to right, var(--color-accent-rzal), var(--color-accent-diego));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
 }
